@@ -26,14 +26,14 @@ class ApiService {
           }
 
           return null;
-        } on FormatException catch (_) {
-          throw Exception('write a valid URL');
-        }
+          } on FormatException catch (_) {
+            return null;
+          }
       } else {
-        throw Exception('Failed to transcribe');
+        return null;
       }
     } catch (e) {
-      throw Exception('Network error: $e');
+      return null;
     }
   }
 }

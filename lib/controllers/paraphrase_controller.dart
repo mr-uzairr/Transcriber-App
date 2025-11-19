@@ -38,13 +38,10 @@ class ParaphraseController extends GetxController {
         transcription.value = result;
         showResult.value = true;
       } else {
-        Get.snackbar('No transcription', 'No transcription returned', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error', 'Failed to transcribe. Please check the URL and try again.', snackPosition: SnackPosition.BOTTOM);
         showResult.value = false;
       }
-    } catch (e) {
-      Get.snackbar('Request error', e.toString(), snackPosition: SnackPosition.BOTTOM);
-      showResult.value = false;
-    } finally {
+    }  finally {
       isLoading.value = false;
     }
   }
