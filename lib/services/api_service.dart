@@ -29,8 +29,9 @@ class ApiService {
         } on FormatException catch (_) {
           throw Exception('write a valid URL');
         }
+      } else {
+        throw Exception('Failed to transcribe');
       }
-      throw Exception('HTTP ${resp.statusCode}: ${resp.body}');
     } catch (e) {
       throw Exception('Network error: $e');
     }
