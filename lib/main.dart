@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:transcriber_app/views/paraphrase_view.dart';
-import 'views/premium_view.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

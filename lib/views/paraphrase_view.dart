@@ -5,7 +5,6 @@ import 'dart:math' as math;
 import 'dart:ui' as ui;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:share_plus/share_plus.dart';
-import 'premium_view.dart';
 import '../controllers/paraphrase_controller.dart';
 
 class ParaphraseView extends GetView<ParaphraseController> {
