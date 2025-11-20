@@ -38,7 +38,7 @@ class ParaphraseController extends GetxController {
         transcription.value = result;
         showResult.value = true;
       } else {
-      Get.snackbar('Error', 'Failed to transcribe. Please check the URL and try again.', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('', 'Failed to transcribe. Please check the URL and try again.', snackPosition: SnackPosition.TOP, backgroundColor: Colors.red);
         showResult.value = false;
       }
     }  finally {
@@ -61,6 +61,6 @@ class ParaphraseController extends GetxController {
   Future<void> copyToClipboard() async {
     if (transcription.value.isEmpty) return;
     await Clipboard.setData(ClipboardData(text: transcription.value));
-    Get.snackbar('Copied', 'Copied to clipboard', snackPosition: SnackPosition.BOTTOM);
+    Get.snackbar('', 'Copied to clipboard', snackPosition: SnackPosition.TOP, backgroundColor: Colors.green);
   }
 }

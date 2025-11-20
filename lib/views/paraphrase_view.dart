@@ -134,7 +134,7 @@ class ParaphraseView extends GetView<ParaphraseController> {
                                           trailing: const Icon(Icons.chevron_right),
                                           onTap: () {
                                             entry.remove();
-                                            Get.snackbar('Info', 'Terms & Privacy not implemented yet', snackPosition: SnackPosition.BOTTOM);
+                                            Get.snackbar('', 'Terms & Privacy not implemented yet', snackPosition: SnackPosition.TOP);
                                           },
                                         ),
                                         ListTile(
@@ -142,7 +142,7 @@ class ParaphraseView extends GetView<ParaphraseController> {
                                           trailing: const Icon(Icons.chevron_right),
                                           onTap: () {
                                             entry.remove();
-                                            Get.snackbar('Info', 'Contact Us not implemented yet', snackPosition: SnackPosition.BOTTOM);
+                                            Get.snackbar('', 'Contact Us not implemented yet', snackPosition: SnackPosition.TOP);
                                           },
                                         ),
                                       ],
@@ -196,7 +196,7 @@ class ParaphraseView extends GetView<ParaphraseController> {
               ),
               onPressed: () {
                 // Get.to(() => const PremiumView());
-                Get.snackbar('Premium', 'Premium feature comming soon', snackPosition: SnackPosition.BOTTOM);
+                Get.snackbar('', 'Premium feature comming soon', snackPosition: SnackPosition.TOP);
               },
             ),
           ),
